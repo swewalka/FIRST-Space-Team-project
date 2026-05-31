@@ -10,6 +10,7 @@ The objective of this project is to design, manufacture, and launch a model rock
 * `guidelines/` - Contains the official FIRST project documentation.
   * `reviews-and-technical-requirements.pdf` - Core project constraints and review checklists.
   * `how-to-rocketry-UoF.pdf` - Best practices for manufacturing and component integration.
+  * `flightsimulation_guide` - A detailed Document about the basic physics of rocketry and flight simulation. 
 * `design_decisions.md` - Detailed architectural breakdown of our airframe, E-Bay, and recovery system layout.
 * `rocket_layout.svg` - Visual schematic of the rocket's internal layout and separation points.
 * `team_schubkraftverweigerer_simulation.ork` - The primary OpenRocket flight simulation file. 
@@ -18,9 +19,11 @@ The objective of this project is to design, manufacture, and launch a model rock
 * **Motor:** AeroTech H238T (29mm)
 * **Target Altitude:** ≤ 600m
 * **Stability Margin:** 1 - 2 calibers (strictly > 0.1 * rocket length)
-* **Recovery:** Main parachute deployed at apogee via flight computer, backed up by a mechanical engine ejection charge. Both systems share a common pressure hull.
+* **Recovery:** Main parachute deployed at apogee via flight computer, backed up by a mechanical engine ejection charge
 
 ## Getting Started
+Note: If you have never worked on (model) rockets before it is highly recommended to read ![this](guidelines/flightsimulation_guide.pdf) guide on Rocketry and flight simulation. 
+
 To view and modify the rocket simulation:
 1. Download and install [OpenRocket](https://openrocket.info/).
 2. Open the `.ork` file located in the root of this repository.
