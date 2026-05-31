@@ -1,14 +1,14 @@
 # FIRST Project: Rocket Design Decisions & Architecture
 
-This document outlines the major architectural and design decisions made for our TU Space Team FIRST project rocket. These decisions were driven by the constraints outlined in the `reviews-and-technical-requirements.pdf` and the `how-to-rocketry-UoF.pdf` guidelines.
+This document outlines the major architectural and design decisions made for our TU Space Team FIRST project rocket. These decisions were driven by the constraints outlined in the `reviews-and-technical-requirements.pdf` and the `how-to-rocketry-UoF.pdf` guidelines found ![here](guidelines/).
 
 ## 1. Airframe and Aerodynamics
-* **Diameter Selection for Altitude Control:** We opted for a wider body tube diameter (70mm) rather than a minimum-diameter design. The larger cross-sectional area generates natural aerodynamic drag, ensuring the simulated altitude strictly remains $\le 600m$ (Req 4.4) given the high thrust of the AeroTech H238T motor. This also provides ample volume for easier parachute packing and avionics integration.
-* **Boat Tail & Fin Placement:** Initial designs included an aft boat tail, but simulation in OpenRocket revealed it pulled the Center of Pressure (CP) forward, reducing our stability margin. Furthermore, narrowing the aft end exposed the fin roots. To comply with the stability margin requirement ($s > 0.1 * L$ and $s = 1-2$ calibers, Req 4.1) and to prevent the fins from breaking upon ground impact (How to Rocketry 1.3), we rely on a standard cylindrical aft section where fins do not protrude past the bottom of the body tube.
+* **Diameter Selection for Altitude Control:** We opted for a wider body tube diameter (65mm) rather than a minimum-diameter design. The larger cross-sectional area generates natural aerodynamic drag, ensuring the simulated altitude strictly remains $\le 600m$ (Req 4.4) given the high thrust of the AeroTech H238T motor. This also provides ample volume for easier parachute packing and avionics integration.
+* **Fin Design & Placement:** The rocket utilizes trapezoidal fins mounted on a standard cylindrical aft section. To prevent structural damage upon ground impact (How to Rocketry 1.3), the fins are positioned so that they do not protrude past the bottom of the body tube. The exact shape and overall size of these trapezoidal fins are the primary design variables tuned within OpenRocket to correctly position the Center of Pressure (CP) and strictly satisfy the aerodynamic stability margin requirements ($s > 0.1 * L$ and $s = 1-2$ calibers, Req 4.1).
 * **Materials:** * Main pressure hull and airframe: Carbon Fiber (CFK) for high stiffness-to-weight ratio.
   * Avionics bay section: Glass Fiber (GFK) to allow radio transmissions, as CFK is electrically conductive and acts as a Faraday cage.
   * Internal sleds: 3D printed in PC or ASA (avoiding PLA due to low heat resistance near pyrotechnics).
-
+1
 ## 2. Motor Mount Assembly
 * **Dimensions:** Per Requirement 5, the internal motor tube is designed to a length of $\approx 250mm$ to accommodate the 29mm AeroTech motor with 4 grains. (Note: The bare H238T casing in OpenRocket is shorter, but the 250mm tube accounts for the forward closure, ejection cap, and thermal margins).
 * **Thrust Transfer & Retention:** Thrust is transferred via the motor casing's aft lip pressing against the bottom edge of the motor tube. To prevent the motor from being expelled backwards during the backup ejection charge, we utilize an aft retainer ring secured by three M3 screws spaced at 120°, per the schematic in How to Rocketry Section 2.
