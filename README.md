@@ -13,7 +13,7 @@ The objective of this project is to design, manufacture, and launch a model rock
   * `flightsimulation_guide` - A detailed Document about the basic physics of rocketry and flight simulation. 
 * `design_decisions.md` - Detailed architectural breakdown of our airframe, E-Bay, and recovery system layout.
 * `rocket_layout.svg` - Visual schematic of the rocket's internal layout and separation points.
-* `team_schubkraftverweigerer_simulation.ork` - The primary OpenRocket flight simulation file. 
+* [`rocket_simulation.ork`](rocket_simulation.ork) - The OpenRocket flight simulation file.
 
 ## Key Engineering Constraints
 * **Motor:** AeroTech H238T (29mm)
@@ -26,5 +26,5 @@ Note: If you have never worked on (model) rockets before it is highly recommende
 
 To view and modify the rocket simulation:
 1. Download and install [OpenRocket](https://openrocket.info/).
-2. Open the `.ork` file located in the root of this repository.
+2. Open [`rocket_simulation.ork`](rocket_simulation.ork) located in the root of this repository.
 3. Reference `design_decisions.md` and `rocket_layout.svg` to understand the structural rationale behind the selected dimensions, component masses, and the stacking order.
